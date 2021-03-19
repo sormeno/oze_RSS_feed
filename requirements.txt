@@ -1,0 +1,6 @@
+selenium
+smtplib
+bs4
+urllib
+email
+xml

@@ -6,8 +6,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev 
 	
 RUN git clone https://github.com/sormeno/oze_RSS_feed.git
-RUN pip install -r ./oze_RSS_feed/configs/requirements.txt
-COPY libs/lib_credentials/access.json /oze_RSS_feed/libs/lib_credentials
+RUN pip install -r ./oze_RSS_feed/requirements.txt
+COPY configs /oze_RSS_feed
 
 # We need wget to set up the PPA and xvfb to have a virtual screen and unzip to install the Chromedriver
 RUN apt-get install -y wget xvfb unzip
